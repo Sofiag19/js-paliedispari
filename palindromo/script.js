@@ -10,7 +10,7 @@ var palindroma = false;
 var j = 0;
 var k = wordLow.length - 1;
 
-while (j < wordLow.length && wordLow[j] === wordLow[k]) {
+while ((j < wordLow.length) && (wordLow[j] === wordLow[k])) {
   console.log("posizione sx-dx " + wordLow[j]);
   console.log("posizione dx-sx " + wordLow[k]);
 
@@ -21,9 +21,18 @@ while (j < wordLow.length && wordLow[j] === wordLow[k]) {
     console.log("lettere uguali");
     palindroma = true;
   }
-
   j++, k--;
 }
+console.log(palindroma);
+
+// while (j < wordLow.length && wordLow[j] === wordLow[k]) {
+//   console.log("posizione sx-dx " + wordLow[j]);
+//   console.log("posizione dx-sx " + wordLow[k]);
+//   palindroma = true;
+//   j++, k--;
+// }
+//
+// console.log(palindroma);
 
 // if (palindroma = true) {
 //   console.log("parola palindroma");
