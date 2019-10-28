@@ -17,19 +17,50 @@ for (var i = 0; i < wordLow.length; i++) {
 console.log(wordArray);
 
 // devo ciclare l'array confrontando la prima parola con l'ultima...la seconda con la penultima e così via
-var palindroma = false;
-for (j = 0 , k = wordArray.length - 1; j < wordArray.length ; j++, k-- ) {
+
+/*var palindroma = false;
+
+for (j = 0, k = wordArray.length - 1; j < wordArray.length ; j++, k-- ) {
   if (wordArray[j] === wordArray[k]) {
-    console.log("parola palindroma");
-    // palindroma = true;
-  }else {
-    // palindroma = false;
-    console.log("non palindroma");
+    // console.log("parola palindroma");
+    console.log(wordArray[j] ,wordArray[k]);
+    
+    palindroma = true;
+  } else {
+    palindroma = false;
+    // console.log("non palindroma");
   }
 }
+console.log(palindroma);
 
+
+  if (palindroma = true) {
+  console.log("parola palindroma");
+  } else if (palindroma = false){
+    console.log("non palindroma");
+  }*/
+
+
+
+// proviamo invertendo l'array
+var wordArrayDupl = wordArray.slice(0);
+var wordArrayRev = wordArray.reverse();
+console.log(wordArrayRev);
+
+
+var palindroma = false;
+for (var i = 0; i < wordArray.length; i++)
+  if (wordArray[i] == wordArrayRev[i]){
+    palindroma = true;
+  } else {
+    palindroma = false;
+  }
+  console.log(palindroma);
+  
   // if (palindroma = true) {
-  // console.log("parola palindroma");
+  //   return console.log("é palindroma");
   // } else {
-  //   console.log("non palindroma");
+  //   return console.log("non è palindroma");
   // }
+
+
