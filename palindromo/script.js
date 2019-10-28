@@ -18,6 +18,9 @@ if (wordLowInv === wordLow) {
 } else {
   console.log("non palindroma");
 }
+
+
+
 // while (j < wordLow.length) {
 //   console.log("posizione sx-dx " + wordLow[j]);
 //   console.log("posizione dx-sx " + wordLow[k]);
@@ -72,16 +75,6 @@ if (wordLowInv === wordLow) {
 //     console.log("non palindroma");
 //   }
 // }
-
-
-
-
-
-
-
-
-
-
 
 
 // devo eliminare spazi e caratteri speciali (?????)
