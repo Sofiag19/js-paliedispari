@@ -6,24 +6,34 @@ var word = prompt("Inserisci una parola per scoprire se è palindroma");
 // uniformare i caratteri
 var wordLow = word.toLowerCase();
 
-var palindroma = false;
-var j = 0;
-var k = wordLow.length - 1;
-
-while ((j < wordLow.length) && (wordLow[j] === wordLow[k])) {
-  console.log("posizione sx-dx " + wordLow[j]);
-  console.log("posizione dx-sx " + wordLow[k]);
-
-  if (wordLow[j] !== wordLow[k]) {
-    console.log("lettere diverse");
-    palindroma = false;
-  } else {
-    console.log("lettere uguali");
-    palindroma = true;
-  }
-  j++, k--;
+// parola invertita
+var wordLowInv = "";
+for (var i = wordLow.length - 1; i >= 0; i--) {
+  wordLowInv += wordLow[i];
 }
-console.log(palindroma);
+console.log(wordLowInv);
+
+if (wordLowInv === wordLow) {
+  console.log("palindroma");
+} else {
+  console.log("non palindroma");
+}
+// while (j < wordLow.length) {
+//   console.log("posizione sx-dx " + wordLow[j]);
+//   console.log("posizione dx-sx " + wordLow[k]);
+//
+//   if (wordLow[j] !== wordLow[k]) {
+//     console.log("lettere diverse");
+//     palindroma = false;
+//   } else {
+//     console.log("lettere uguali");
+//     palindroma = true;
+//   }
+//   j++, k--;
+// }
+// console.log(palindroma);
+// var j = 0;
+// var k = wordLow.length - 1;
 
 // while (j < wordLow.length && wordLow[j] === wordLow[k]) {
 //   console.log("posizione sx-dx " + wordLow[j]);
