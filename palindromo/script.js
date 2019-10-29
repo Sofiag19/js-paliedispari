@@ -6,17 +6,21 @@ var word = prompt("Inserisci una parola per scoprire se è palindroma");
 // uniformare i caratteri
 var wordLow = word.toLowerCase();
 
-// parola invertita
-var wordLowInv = "";
-for (var i = wordLow.length - 1; i >= 0; i--) {
-  wordLowInv += wordLow[i];
-}
-console.log(wordLowInv);
+palindromia(wordLow);
 
-if (wordLowInv === wordLow) {
-  console.log("palindroma");
-} else {
-  console.log("non palindroma");
+function palindromia(wordInput) {
+  // parola invertita
+  var wordLowInv = "";
+  for (var i = wordInput.length - 1; i >= 0; i--) {
+    wordLowInv += wordInput[i];
+  }
+  return console.log(wordLowInv);
+
+  if (wordLowInv === wordInput) {
+    return console.log("palindroma");
+  } else {
+    return console.log("non palindroma");
+  }
 }
 
 
