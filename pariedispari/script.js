@@ -11,22 +11,24 @@ console.log(paDiUtente);
 var numUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
 console.log(numUtente);
 
-
 // generare un numero casuale da 1 a 5 con una funzione
 var numPc = numRandom (1,5);
 console.log(numPc);
 
+// output finale
 var vittoria = pariDispari(numUtente, numPc);
+console.log("Vince il " + vittoria);
 
 // funzioni
 function numRandom(min, max) {
-  return Math.floor((Math.random() * max) + min );
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
 function pariDispari(num1,num2) {
   var somma = num1 + num2;
   if (somma % 2 === 0) {
-    return console.log("vince il pari");
+    return "pari";
   } else {
-    return console.log("vince il dispari");
+    return "dispari";
   }
 }
