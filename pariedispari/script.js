@@ -14,19 +14,19 @@ console.log(numUtente);
 
 // generare un numero casuale da 1 a 5 con una funzione
 var numPc = numRandom (1,5);
-  function numRandom(min, max) {
-    return Math.floor((Math.random() * max) + min );
-  }
 console.log(numPc);
 
-// creare una funzione che ci permette di sommare i due numeri ed impostare il return per capire se la somma è pari o dispari
-function pariDispari(numUtente, numPc) {
-  var somma = numUtente + numPc;
+var vittoria = pariDispari(numUtente, numPc);
+
+// funzioni
+function numRandom(min, max) {
+  return Math.floor((Math.random() * max) + min );
+}
+function pariDispari(num1,num2) {
+  var somma = num1 + num2;
   if (somma % 2 === 0) {
     return console.log("vince il pari");
   } else {
-    return console.log("vince il dispari");  
+    return console.log("vince il dispari");
   }
 }
-
-var vittoria = pariDispari(numUtente, numPc);
